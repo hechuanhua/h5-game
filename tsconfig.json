@@ -1,0 +1,71 @@
+{
+  "compilerOptions": {
+    // 指定编译输出的目录，将编译后的文件放在./dist/目录下
+    "outDir": "./dist/",
+
+    // 指定编译目标，使用最新的ECMAScript标准
+    "target": "ESNext",
+
+    // 指定要包含的库文件，包括DOM、DOM迭代器和最新的ES特性
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    // 指定模块系统，使用最新的ES模块系统
+    "module": "ESNext",
+
+    // 跳过对声明文件的类型检查，提高编译速度
+    "skipLibCheck": true,
+
+    // 允许从没有默认导出的模块中默认导入
+    "allowSyntheticDefaultImports": true,
+
+    // 生成source map文件，便于调试时映射到源代码
+    "sourceMap": true,
+
+    // 指定要包含的类型声明文件，这里指定了Vite的环境类型定义
+    "types": ["./src/vite-env.d.ts"],
+
+    /* Bundler mode */
+    // 模块解析策略，使用打包工具（如Vite）的解析方式
+    "moduleResolution": "bundler",
+
+    // 允许导入JSON文件作为模块
+    "resolveJsonModule": true,
+
+    // 将每个文件作为单独的模块处理，提高兼容性
+    "isolatedModules": true,
+
+    // 不生成输出文件，只进行类型检查（因为Vite会处理打包）
+    "noEmit": true,
+
+    // 指定JSX的转换方式，使用React 17+的新JSX转换
+    "jsx": "react-jsx",
+
+    /* Linting */
+    // 启用所有严格类型检查选项
+    "strict": true,
+
+    // 不检查未使用的局部变量
+    "noUnusedLocals": false,
+
+    // 不检查未使用的函数参数
+    "noUnusedParameters": false,
+
+    // 确保switch语句中的每个case都有break或return
+    "noFallthroughCasesInSwitch": true,
+
+    /* alias */
+    // 设置模块解析的基础路径，当前目录
+    "baseUrl": "./",
+
+    // 设置路径别名，@/*指向src/*目录
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+
+  // 指定要包含在编译中的文件或目录，这里包含src目录
+  "include": ["src"],
+
+  // 引用其他TypeScript配置文件，这里引用了Node.js相关的配置
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

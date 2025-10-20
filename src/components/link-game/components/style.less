@@ -1,0 +1,19 @@
+.paw-steps {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+
+  .paw-step {
+    width: 24px;
+    height: 24px;
+
+    &:nth-child(2n + 1) {
+      margin-top: 4px;
+    }
+
+    &:nth-child(2n) {
+      margin-top: -4px;
+    }
+  }
+}
